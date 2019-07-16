@@ -1,13 +1,5 @@
----
-title: "Something fascinating"
-author: "Jenny Bryan"
-date: "2019-05-16"
-output:
-  html_document:
-    keep_md: true
----
 
-# Harjoitus, datavaraston laadinta
+1. HARJOITUS, DATAVARASTON LAADINTA
 githubissa: > new repository
 “firstTestRepo”, “Testing my setup”
 public
@@ -34,7 +26,7 @@ $ git remote show origin
   Local ref configured for 'git push':
     master pushes to master (up to date)
 
-# DATAN MUOKKAUS JA DATAVARASTON PÄIVITYS
+2. DATAN MUOKKAUS JA DATAVARASTON PÄIVITYS
 $ echo "Lisätään rivi README.md tekstitiedostoon" >> README.md
 $ git status
 Komento kertoo, että README.md tiedostoa on modifioitu: “Changes not staged for commit”
@@ -42,25 +34,25 @@ $ git add -A
 Nyt “Changes to be committed” ja lopuksi
 $ git commit -m "työhakemistossa tehty commit"
 
-# DATAVARASTON POISTAMINEN  
+3. DATAVARASTON POISTAMINEN  
 $ cd..
 $ rm -rf firstTestRepo/
 
-# TUNNUSSANOISTA
+4. TUNNUSSANOISTA
 SSH-avaimen käyttö on vaihtoehto HTTPS-protokollalle  ja sitä suositellaan. Se mahdollistaa datavaraston käytön ilman jatkuvaa tunnusten ja salasanan syöttöä projektikohtaisesti. SSH-avaimen käyttöönotto tapahtuu automaattisesti, kun github-projekti laaditaan mac:illä, windowsissa saattaa joutua säätämään.
 
-# R-STUDION ja GITHUB:n kytkentä
+5. R-STUDION ja GITHUB:n kytkentä
 Korvataan em. työhakemisto firstTestRepo R-studio-työhakemistolla, vanha deletoidaan ja uusi tuodaan R-studion kautta.
 R-studiossa aloita uusi projekti:
 File > New Project > Version Control > Git
 leikkaa-liitä github datavaraston url osoite. Käytä projektin nimenä samaa nimeä, mikä on datavarastollakin (oletus).
 
-# VANHAN R-PROJEKTIN SIIRTO GITHUBIIN
+6. VANHAN R-PROJEKTIN SIIRTO GITHUBIIN
 1. laaditaan githubiin uusi tyhjä datavarasto
 2. muodostetaan siitä R:ään työtiedosto
 3. leikkaa-liitä tiedostot R-työtiedostoon ja päivitä datavarasto.
 
-# SIIRRETTÄVÄ PROJEKTI ON ENNESTÄÄN DATAVARASTO
+7. SIIRRETTÄVÄ PROJEKTI ON ENNESTÄÄN DATAVARASTO
 Paikallisen koneen siirrettävän git-hakemiston r-projektissa:
 1. "New branch" -työkalusta löytyy "add remote"-painike, johon voi leiketaulusta liittää remote datavaraston (github) osoitteen. "*remote name*" on "*origin*". painikkeella ""*Add*" prosessi siirtyy "*new branch*" -kohtaan. Tarkoitus on kopioida työprojektin "*master*"-haara github-projektin "*master*"-haaraksi. Siirrettävän haaran nimi on siis "*master*" ja varmista että "*Sync branch with remote*" on käytössä. Päällekirjoitetaan olemassa oleva haara.
 
