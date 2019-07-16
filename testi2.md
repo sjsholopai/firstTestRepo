@@ -1,27 +1,30 @@
-Kuvannetun/muotoillun R-skriptin esitys
+Githubin käyttöönotto ja alkuharjoituksia
 ================
 Jyrki Holopainen
-16.07.2019 18:08
+16.07.2019 18:23
 
-Here's some prose in a very special comment. Let's summarize the built-in dataset `VADeaths`.
+HARJOITUS, DATAVARASTON LAADINTA
+--------------------------------
 
-``` r
-## here is a regular code comment, that will remain as such
-summary(VADeaths)
-```
+Perustuu dokumenttiin <https://happygitwithr.com/git-intro.html> githubissa: &gt; new repository “firstTestRepo”, “Testing my setup” public initialise with readme (“This will let you immediately clone the repository to your computer”) kopioi URL Tee työhakemisto tmp-kansioon cd /Users/jyrkiholopainen/Desktop/testi/githubWD $ pwd /Users/jyrkiholopainen/Desktop/testi/githubWD Jyrki-Holopainens-MacBook-Pro:githubWD jyrkiholopainen$ clone or download -&gt; leiketauluun url <https://github.com/sjsholopai/firstTestRepo.git> $ git clone <https://github.com/sjsholopai/firstTestRepo.git> $ cd firstTestRepo $ git remote show origin \* remote origin Fetch URL: <https://github.com/sjsholopai/firstTestRepo.git> Push URL: <https://github.com/sjsholopai/firstTestRepo.git> HEAD branch: master Remote branch: master tracked Local branch configured for 'git pull': master merges with remote master Local ref configured for 'git push': master pushes to master (up to date) \#\# DATAN MUOKKAUS JA DATAVARASTON PÄIVITYS
 
-    ##    Rural Male     Rural Female     Urban Male     Urban Female  
-    ##  Min.   :11.70   Min.   : 8.70   Min.   :15.40   Min.   : 8.40  
-    ##  1st Qu.:18.10   1st Qu.:11.70   1st Qu.:24.30   1st Qu.:13.60  
-    ##  Median :26.90   Median :20.30   Median :37.00   Median :19.30  
-    ##  Mean   :32.74   Mean   :25.18   Mean   :40.48   Mean   :25.28  
-    ##  3rd Qu.:41.00   3rd Qu.:30.90   3rd Qu.:54.60   3rd Qu.:35.10  
-    ##  Max.   :66.00   Max.   :54.30   Max.   :71.10   Max.   :50.00
+echo "Lisätään rivi README.md tekstitiedostoon" &gt;&gt; README.md git status Komento kertoo, että README.md tiedostoa on modifioitu: “Changes not staged for commit” $ git add -A Nyt “Changes to be committed” ja lopuksi $ git commit -m "työhakemistossa tehty commit" \#\# DATAVARASTON POISTAMINEN
 
-Here's some more prose. I can use usual markdown syntax to make things **bold** or *italics*. Let's use an example from the `dotchart()` help to make a Cleveland dot plot from the `VADeaths` data. I even bother to name this chunk, so the resulting PNG has a decent name.
+$ cd.. $ rm -rf firstTestRepo/ \#\# TUNNUSSANOISTA SSH-avaimen käyttö on vaihtoehto HTTPS-protokollalle ja sitä suositellaan. Se mahdollistaa datavaraston käytön ilman jatkuvaa tunnusten ja salasanan syöttöä projektikohtaisesti. SSH-avaimen käyttöönotto tapahtuu automaattisesti, kun github-projekti laaditaan mac:illä, windowsissa saattaa joutua säätämään. \#\# R-STUDION ja GITHUB:n kytkentä Korvataan em. työhakemisto firstTestRepo R-studio-työhakemistolla, vanha deletoidaan ja uusi tuodaan R-studion kautta. R-studiossa aloita uusi projekti: File &gt; New Project &gt; Version Control &gt; Git leikkaa-liitä github datavaraston url osoite. Käytä projektin nimenä samaa nimeä, mikä on datavarastollakin (oletus). \#\# VANHAN R-PROJEKTIN SIIRTO GITHUBIIN 1. laaditaan githubiin uusi tyhjä datavarasto 2. muodostetaan siitä R:ään työtiedosto 3. leikkaa-liitä tiedostot R-työtiedostoon ja päivitä datavarasto. \#\# SIIRRETTÄVÄ PROJEKTI ON ENNESTÄÄN DATAVARASTO Paikallisen koneen siirrettävän git-hakemiston r-projektissa: 1. "New branch" -työkalusta löytyy "add remote"-painike, johon voi leiketaulusta liittää remote datavaraston (github) osoitteen. "*remote name*" on "*origin*". painikkeella ""*Add*" prosessi siirtyy "*new branch*" -kohtaan. Tarkoitus on kopioida työprojektin "*master*"-haara github-projektin "*master*"-haaraksi. Siirrettävän haaran nimi on siis "*master*" ja varmista että "*Sync branch with remote*" on käytössä. Päällekirjoitetaan olemassa oleva haara. konsolissa homma on helpoin:
 
-``` r
-dotchart(VADeaths, main = "Death Rates in Virginia - 1940")
-```
+    git remote add origin https://github.com/sjsholopai/firstTestRepo.git
+    git push --set-upstream origin master
 
-![](testi2_files/figure-markdown_github/dotchart-1.png)
+MUOTOILTU TIEDOSTO GITHUBIIN
+----------------------------
+
+html-tiedosto näkyy html-koodina. Mikäli tarkoituksena on esittää muotoiltua tekstiä, tulee kirjoittaa rmd-tiedosto ja knitata md:ksi. Homma onnistuu seuravanlaatuisella yaml-koodilla:
+
+    ---
+    title: "Otsikkoteksti"
+    author: "auktori"
+    date: "April 1, 2014"
+    output: github_document
+    ---
+
+Huomaa kommentin merkki, joka on roxygen-tyylin merkkausta.
