@@ -104,3 +104,30 @@ date: "April 1, 2014"
 output: github_document
 ```
 Huomaa kommentin merkki, joka on roxygen-tyylin merkkausta.
+
+## GIT LOG: Historia
+
+```
+git log --pretty=format:"%h - %an,%ar : %s"
+git log --graph
+```
+jossa %h = abbreviated commit hash  
+%an = author name  
+%ar = author date, relative  
+%s = subject  
+
+## Kehityshaarat
+
+Muodostetaan haara ja siirrytään siihen checkout komennolla. Suoritetaan deletointi, päivitetään datavarasto ja siirrytään checkout komennolla takaisin päähaaraan
+```
+git branch delTestFiles
+git checkout delTestFiles
+git rm README.html
+git rm readme.md
+git rm testi*
+git commit --all -m "Turhien fileiden deletointi"
+git checkout master
+git merge delTestFiles
+```
+Myös 
+
