@@ -1,10 +1,10 @@
 ---
-    title: "Something fascinating"
-    author: "Jenny Bryan"
-    date: "2019-05-16"
-    output:
-      html_document:
-        keep_md: true
+title: "Something fascinating"
+author: "Jenny Bryan"
+date: "2019-05-16"
+output:
+  html_document:
+    keep_md: true
 ---
 
 # Harjoitus, datavaraston laadinta
