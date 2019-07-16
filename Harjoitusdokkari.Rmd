@@ -105,6 +105,9 @@ output: github_document
 ```
 Huomaa kommentin merkki, joka on roxygen-tyylin merkkausta.
 
+## Lokaali kehityshaara
+
+Lokaali haara ei näy datavarastossa, kehitystä voi tehdä kunnes on valmista, ja sitten siirtyä takaisin päähaaraan, ja sieltä käsi yhdistää kehityshaara päähaaraan.
 ## GIT LOG: Historia
 
 ```
@@ -129,5 +132,5 @@ git commit --all -m "Turhien fileiden deletointi"
 git checkout master
 git merge delTestFiles
 ```
-Myös 
+
 
