@@ -1,7 +1,7 @@
 Kuvannetun/muotoillun R-skriptin esitys
 ================
 Jyrki Holopainen
-16 July, 2019
+16.07.2019 18:08
 
 Here's some prose in a very special comment. Let's summarize the built-in dataset `VADeaths`.
 
