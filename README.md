@@ -1,5 +1,7 @@
 
 1. HARJOITUS, DATAVARASTON LAADINTA
+Perustuu dokumenttiin https://happygitwithr.com/git-intro.html
+
 githubissa: > new repository
 “firstTestRepo”, “Testing my setup”
 public
@@ -61,3 +63,15 @@ konsolissa homma on helpoin:
 git remote add origin https://github.com/sjsholopai/firstTestRepo.git
 git push --set-upstream origin master
 ```
+7. MUOTOILTU TIEDOSTO GITHUBIIN
+html-tiedosto näkyy html-koodina. Mikäli tarkoituksena on esittää muotoiltua tekstiä, tulee kirjoittaa rmd-tiedosto ja knitata md:ksi. Homma onnistuu seuravanlaatuisella yaml-koodilla:
+```
+#' ---
+#' title: "Otsikkoteksti"
+#' author: "auktori"
+#' date: "April 1, 2014"
+#' output: github_document
+#' ---
+#'
+```
+Huomaa kommentin merkki, joka on roxygen-tyylin merkkausta.
