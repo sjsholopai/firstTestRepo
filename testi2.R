@@ -1,7 +1,7 @@
 #' ---
-#' title: "R scripts can be rendered!"
-#' author: "Jenny Bryan"
-#' date: "April 1, 2014"
+#' title: "Kuvannetun/muotoillun R-skriptin esitys"
+#' author: "Jyrki Holopainen"
+#' date: "`r format(Sys.time(), '%d.%m.%Y %H:%M')`"
 #' output: github_document
 #' ---
 #'

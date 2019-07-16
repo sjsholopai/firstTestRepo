@@ -1,7 +1,7 @@
-R scripts can be rendered!
+Kuvannetun/muotoillun R-skriptin esitys
 ================
-Jenny Bryan
-April 1, 2014
+Jyrki Holopainen
+16 July, 2019
 
 Here's some prose in a very special comment. Let's summarize the built-in dataset `VADeaths`.
 
